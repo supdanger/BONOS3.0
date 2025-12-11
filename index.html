@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>gestor de bonos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>BONOS</h1>
+    <div class="theme-buttons" aria-label="Selector de tema">
+      <button class="theme-btn dark" data-theme="dark" title="Oscuro">🌙</button>
+      <button class="theme-btn midnight" data-theme="midnight" title="Medianoche">⭐</button>
+      <button class="theme-btn forest" data-theme="forest" title="Bosque">🌲</button>
+      <button class="theme-btn ocean" data-theme="ocean" title="Océano">🌊</button>
+      <button class="theme-btn sunset" data-theme="sunset" title="Atardecer">🌅</button>
+      <button class="theme-btn light" data-theme="light" title="Claro">☀️</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="panel">
+      <h2>Acciones de bonos</h2>
+      <div class="buttons-vertical">
+        <button class="bono" data-value="500" data-label="Bono 500">Bono 500</button>
+        <button class="bono" data-value="1000" data-label="Bono 1000">Bono 1000</button>
+        <button class="bono" data-value="2000" data-label="Bono 2000">Bono 2000</button>
+        <button class="bono" data-value="1000" data-label="Bono 1000 recomendado">Bono 1000 recomendado</button>
+        <button class="bono" data-value="1000" data-label="Bono 1000 recomendador">Bono 1000 recomendador</button>
+      </div>
+      <div class="actions">
+        <button id="reset" class="reset">Reiniciar contadores</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Resumen de bonos</h2>
+      <table class="summary" aria-label="Tabla resumen de bonos">
+        <thead>
+          <tr>
+            <th>Tipo de bono</th>
+            <th>Otorgados</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>500</td><td id="count-500">0</td></tr>
+          <tr><td>1000</td><td id="count-1000">0</td></tr>
+          <tr><td>2000</td><td id="count-2000">0</td></tr>
+          <tr><td>1000 recomendado</td><td id="count-1000-recomendado">0</td></tr>
+          <tr><td>1000 recomendador</td><td id="count-1000-recomendador">0</td></tr>
+          <tr class="total-row"><td>Total monto otorgado</td><td id="sum-total">0</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Registro de otorgamientos</h2>
+      <div class="log-controls">
+            <button id="export" class="secondary">Exportar registro (CSV)</button>
+        <button id="clear-log" class="secondary">Limpiar registro</button>
+      </div>
+      <table class="log" aria-label="Registro de bonos otorgados">
+        <thead>
+          <tr><th>Fecha</th><th>Hora</th><th>Tipo</th><th>Monto</th></tr>
+        </thead>
+        <tbody id="log-body"></tbody>
+      </table>
+      <p class="hint">El reinicio no borra el registro; solo pone a cero los contadores y la suma.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>©SUPDANGER</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
