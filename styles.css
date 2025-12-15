@@ -159,8 +159,8 @@ html[data-theme="light"] {
   cursor: pointer;
   isolation: isolate;
   overflow: hidden;
-  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
-  animation: floaty 2s ease-in-out infinite;
+  transition: transform 50ms ease, box-shadow 5pms ease, border-color 120ms ease;
+  animation: floaty 0s ease-in-out infinite;
 }
 .bono::after {
   content: "";
@@ -214,5 +214,6 @@ table { width: 100%; border-collapse: collapse; font-size: 0.80rem }
 /* Responsivo */
 @media (max-width: 900px) { .main { padding: 14px } }
 @media (max-width: 520px) { .theme-buttons { gap: 8px } }
+
 
 
