@@ -177,7 +177,7 @@ html[data-theme="light"] {
 .bono.clicked { animation: clickPulse 200ms ease-out }
 @keyframes floaty {
   0%, 40% { transform: translateY(0) }
-  50% { transform: translateY(-6px) }
+  20% { transform: translateY(-6px) }
 }
 @keyframes clickPulse {
   0% { box-shadow: 0 0 0 0 rgba(0, 139, 199, 0.965) }
@@ -214,4 +214,5 @@ table { width: 100%; border-collapse: collapse; font-size: 0.80rem }
 /* Responsivo */
 @media (max-width: 900px) { .main { padding: 14px } }
 @media (max-width: 520px) { .theme-buttons { gap: 8px } }
+
 
